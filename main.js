@@ -5,6 +5,8 @@ function createWindow() {
     const mainWindow = new BrowserWindow({
         width: 1200,
         height: 800,
+        title: "Diary",
+        icon: path.join(__dirname, 'assets/icons/app-icon.png'),
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true,
@@ -14,7 +16,7 @@ function createWindow() {
 
     // HTMLファイルをロードし、完了後に開発者ツールを開く
     mainWindow.loadFile('index.html').then(() => {
-        mainWindow.webContents.openDevTools();
+        // mainWindow.webContents.openDevTools();
     });
 }
 
