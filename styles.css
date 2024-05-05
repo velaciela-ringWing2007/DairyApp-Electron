@@ -1,0 +1,62 @@
+/* アプリケーション全体のフォントを設定 */
+body {
+    font-family: 'Meiryo UI', sans-serif;
+}
+
+.app-container {
+    display: flex;
+    height: 95vh;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.entry-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#entry-box {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.datepicker .day-name.sat {
+    color: blue !important;
+}
+
+.datepicker .day-name.sun {
+    color: red !important;
+}
+
+.datepicker .today {
+    font-weight: bold !important;
+    background-color: #ffff00 !important;
+}
+
+.datepicker .date-set {
+    text-decoration: underline !important;
+    color: cornflowerblue; !important;
+}
+
+/* Datepicker のフォントを Meiryo UI に変更 */
+.datepicker {
+    font-family: 'Meiryo UI', sans-serif !important;
+}
+
+.system-messages {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    height: 250px;
+    font-size: 12px;
+}

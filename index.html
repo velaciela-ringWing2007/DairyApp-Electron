@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/vanillajs-datepicker/dist/css/datepicker.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <input type="text" id="search-box" placeholder="Search..." oninput="searchEntries()">
+            <div id="calendar"></div>
+            <div id="system-messages" class="system-messages"></div>  <!-- システムメッセージを表示する新しい要素 -->
+            <button onclick="clearSystemMessage()">ClearSystemMessage</button>
+            <div id="search-results"></div>
+        </div>
+        <div class="entry-container">
+            <textarea id="entry-box"></textarea>
+            <button onclick="saveEntry()">Save</button>
+        </div>
+    </div>
+    <script src="node_modules/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>
