@@ -34,6 +34,12 @@
     npm install
     ```
 
+* ※Proxy環境下でnpm installする時、npm config set proxyとかhttps-proxyでProxy設定しててもダメで、以下のコマンドでElectron用のProxy設定が必要
+    ```bash
+    set ELECTRON_GET_USER_PROXY=1
+    set GLOBAL_AGENT_HTTPS_PROXY=http://～
+    ```
+
 ### アプリケーションの起動
 
 開発環境でアプリケーションを起動するには、次のコマンドを実行します：
@@ -42,7 +48,9 @@
 npm start
 ```
 
-これでアプリケーションが起動し、デフォルトのブラウザで表示されます。
+これでアプリケーションが起動し、デスクトオオップアプリで表示されます。
+
+タスクトレイにも常駐するようになってます。
 
 ## ライセンス
 
