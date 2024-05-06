@@ -3,7 +3,7 @@ const { ipcRenderer } = require('electron');
 const sqlite3 = require('sqlite3').verbose();
 
 // データベースファイルを開く、なければ新規作成
-let db = new sqlite3.Database('./diary.db', sqlite3.OPEN_READWRITE, (err) => {
+let db = new sqlite3.Database('./diary.db', sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
     if (err) {
         console.error('Error opening database', err.message); // データベース開けなかった場合のエラー表示
     } else {
